@@ -1,0 +1,90 @@
+import { useState } from "react";
+import { Button } from "../ui/button";
+import { NavLink } from "react-router";
+import { ThemeToggle } from "./theme-toggle";
+import { Menu, X } from "lucide-react";
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="w-full px-4 sm:px-8 lg:px-[120px]">
+      <div className="w-full py-4">
+        <div className="flex justify-between items-center px-3 py-2 bg-white dark:bg-[#1d1d1d] rounded-[41px]">
+          {/* Left: Logo + Theme toggle */}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <h1 className="font-semibold text-base sm:text-lg leading-none dark:text-le-smoke -tracking-[0.02em]">
+              EPHRAIM LAUGHTER
+            </h1>
+          </div>
+
+          {/* Desktop menu */}
+          <div className="hidden md:flex gap-8 items-center justify-end">
+            <div className="flex gap-3 items-center font-medium text-[#534C57] dark:text-[#cacaca]">
+              <NavLink to="">Home</NavLink>
+              <NavLink to="">Works</NavLink>
+              <NavLink to="">About</NavLink>
+              <NavLink to="">Testimonials</NavLink>
+            </div>
+            <Button variant="primary" className="h-11 font-medium text-sm">
+              Contact Me
+            </Button>
+          </div>
+
+          {/* Mobile menu toggle */}
+          <button
+            className="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div className="mt-2 md:hidden bg-white dark:bg-[#1d1d1d] rounded-xl shadow-lg p-4 space-y-4">
+            <NavLink
+              to=""
+              className="block text-[#534C57] dark:text-[#cacaca]"
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to=""
+              className="block text-[#534C57] dark:text-[#cacaca]"
+              onClick={() => setMenuOpen(false)}
+            >
+              Works
+            </NavLink>
+            <NavLink
+              to=""
+              className="block text-[#534C57] dark:text-[#cacaca]"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to=""
+              className="block text-[#534C57] dark:text-[#cacaca]"
+              onClick={() => setMenuOpen(false)}
+            >
+              Testimonials
+            </NavLink>
+            <Button
+              variant="primary"
+              className="w-full h-11 font-medium text-sm"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact Me
+            </Button>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
