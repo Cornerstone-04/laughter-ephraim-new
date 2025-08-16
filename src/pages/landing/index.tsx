@@ -3,9 +3,9 @@ import Hero from "./hero/hero";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="relative">
       <Navbar />
-      <Hero/>
+      <Hero />
     </div>
   );
 };

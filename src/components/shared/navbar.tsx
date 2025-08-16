@@ -8,7 +8,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full px-4 sm:px-8 lg:px-[120px]">
+    <nav className="w-full px-4 sm:px-8 lg:px-[120px] sticky top-0 z-10">
       <div className="w-full py-4">
         <div className="flex justify-between items-center px-3 py-2 bg-white dark:bg-[#1d1d1d] rounded-[41px]">
           {/* Left: Logo + Theme toggle */}
