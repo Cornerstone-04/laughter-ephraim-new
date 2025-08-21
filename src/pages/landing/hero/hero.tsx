@@ -11,8 +11,7 @@ const Hero = () => {
             className="
               uppercase font-semibold
               text-4xl xs:text-5xl sm:text-6xl md:text-8xl
-              leading-tight sm:leading-[1.05]
-              tracking-tight sm:-tracking-[0.04em]
+              leading-[100%] -tracking-[4%]
               mb-3 sm:mb-4
             "
           >
@@ -23,7 +22,7 @@ const Hero = () => {
             className="
               text-[#454545]
               text-base sm:text-lg md:text-xl
-              leading-relaxed sm:leading-7
+              leading-[100%] -tracking-[4%]
               max-w-[38rem] sm:max-w-[42rem]
               mb-5 sm:mb-6
             "
