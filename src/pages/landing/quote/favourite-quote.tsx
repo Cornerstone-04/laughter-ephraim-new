@@ -1,39 +1,50 @@
-import { Quote } from "lucide-react";
+import Quote from "@/assets/icons/quote.svg";
+// import Gradient from "@/assets/images/gradient.png"
 
 export const FavouriteQuote = () => {
   return (
-    <section className="relative isolate overflow-hidden w-full min-h-screen flex items-center justify-center text-center">
+    <section className="relative isolate overflow-hidden w-full min-h-screen flex items-center justify-center text-center p-4 md:p-6">
       {/* AURORA BACKGROUND */}
-      {/* <div
+      <div
         aria-hidden
         className="
-          pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#ffffff] via-[#FF4318] to-[#4F46E5]        
+          pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#ffffff] via-[#FF4318] to-[#4F46E5]
         "
-      /> */}
-      <div><img src="/gradient.png" alt="" /></div>
+      />
+      {/* <div className="absolute top-0 left-0 w-fit -z-[1000]">
+        <img src={Gradient} alt="" className=" object-cover" />
+      </div> */}
 
-      <div className="mx-auto max-w-4xl px-6 sm:px-8 md:px-16 flex flex-col items-center justify-center gap-8">
-        <div className="flex flex-col items-center justify-center gap-6">
+      <div className="mx-auto w-full max-w-[784px] flex flex-col items-center justify-center gap-6 md:gap-8">
+        <div className="flex flex-col items-center justify-center gap-4 md:gap-6">
           {/* Opening Quote */}
-          <div className="">
-            <Quote className="text-[#4F46E5] w-16 h-16 rotate-180" />
+          <div className="py-4 md:py-6 px-3 md:px-4 flex items-center justify-center">
+            <img
+              src={Quote}
+              alt="quote icon"
+              className="w-10 h-8 md:w-[70px] md:h-[55px] -scale-x-[1]"
+            />
           </div>
 
           {/* Quote Text */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-white max-w-4xl">
+          <h2 className="text-pretty text-2xl md:text-[44px] font-medium leading-snug md:leading-[normal] -tracking-[1.32px] text-white">
             The essence of cinema is editing. It's the combination of what can
             be extraordinary images of people during emotional moments, or
             images in a general sense, put together in a kind of alchemy.
           </h2>
 
           {/* Closing Quote */}
-          <div className="">
-            <Quote className="text-[#4F46E5] w-16 h-16" />
+          <div className="py-4 md:py-6 px-3 md:px-4 flex items-center justify-center">
+            <img
+              src={Quote}
+              alt="quote icon"
+              className="w-10 h-8 md:w-[70px] md:h-[55px]"
+            />
           </div>
         </div>
 
         {/* Attribution */}
-        <p className="text-xl md:text-2xl font-medium text-white mt-8">
+        <p className="text-lg md:text-2xl font-medium text-white mt-6 md:mt-8">
           ~ Francis Ford Coppola
         </p>
       </div>

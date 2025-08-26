@@ -5,7 +5,7 @@ import { FavouriteQuote } from "./quote/favourite-quote";
 
 const LandingPage = () => {
   return (
-    <div className="relative">
+    <div className="relative grid grid-cols-1 gap-y-[40px]">
       <Navbar />
       <Hero />
       <SelectedWorks/>

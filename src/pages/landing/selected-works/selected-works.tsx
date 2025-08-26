@@ -22,7 +22,7 @@ export const SelectedWorks = () => {
                 2020 - 2025
               </h4>
             </div>
-            <p className="w-full max-w-lg text-base md:text-lg text-[#454545] leading-snug md:leading-[100%] -tracking-[3%] font-medium">
+            <p className="w-full max-w-lg text-base md:text-lg text-[#454545] leading-normal -tracking-[.54px] font-medium">
               Get an inside look at the edits, stories, and moments that shaped
               each frame. Dive into my world of cinematic storytelling.
             </p>
@@ -31,18 +31,18 @@ export const SelectedWorks = () => {
           {/* Desktop button (hidden on mobile) */}
           <Button
             variant={"secondary"}
-            className="h-12 sm:h-14 w-full sm:w-fit flex items-center justify-center gap-2 md:inline-flex hidden"
+            className="h-12 sm:h-14 w-full sm:w-fit flex items-center justify-center gap-2 md:inline-flex"
           >
             See all works <ArrowRight />
           </Button>
 
           {/* Mobile button (visible only below md) */}
-          <Button
+          {/* <Button
             variant={"secondary"}
             className="h-12 w-full flex md:hidden items-center justify-center gap-2"
           >
             See all works <ArrowRight />
-          </Button>
+          </Button> */}
         </div>
 
         {/* Grid */}
@@ -66,7 +66,7 @@ export const SelectedWorks = () => {
                     className={[
                       "object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105",
                       isSeries && "object-top",
-                      idx === 3 && "object-center",
+                      idx === 3 && "object-center!",
                       idx === 5 && "object-bottom",
                     ].join(" ")}
                   />
