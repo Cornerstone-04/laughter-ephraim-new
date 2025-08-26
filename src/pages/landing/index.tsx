@@ -1,6 +1,7 @@
 import Navbar from "@/components/shared/navbar";
 import Hero from "./hero/hero";
 import { SelectedWorks } from "./selected-works/selected-works";
+import { FavouriteQuote } from "./quote/favourite-quote";
 
 const LandingPage = () => {
   return (
@@ -8,6 +9,7 @@ const LandingPage = () => {
       <Navbar />
       <Hero />
       <SelectedWorks/>
+      <FavouriteQuote/>
     </div>
   );
 };
